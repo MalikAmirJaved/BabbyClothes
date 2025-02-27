@@ -14,8 +14,8 @@ const AddressNav = () => {
           {/* Home Link */}
           <li>
             <Link
-              to="/home"
-              className={`pb-2 ${pageName === "home" ? "border-b-2 border-gray-500" : ""
+              to="/"
+              className={`pb-2 ${pageName === "" ? "border-b-2 border-gray-500" : ""
                 }`}
             >
               Home
@@ -33,7 +33,7 @@ const AddressNav = () => {
             </Link>
           </li>
 
-          {pageName && pageName !== "home" && pageName !== "collection" && (
+          {pageName && pageName !== "" && pageName !== "collection" && (
             <li className="border-l pl-4 text-gray-600 font-semibold capitalize">
               {pageName.replace("-", " ")}
             </li>

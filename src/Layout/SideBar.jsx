@@ -18,7 +18,7 @@ function SideBar({sethambar, hambar}) {
                 
                 </li>
                 <li className='flex justify-between items-center'><span>CATALOG</span></li>
-                <li className='flex justify-between items-center'>COLLECTIONS</li>
+                <li onClick={()=>{navigate('/collection'); sethambar(prev => !prev)}} className='flex justify-between items-center'>COLLECTIONS</li>
                 
                 <li onClick={()=>{navigate('/section-all'); sethambar(prev => !prev)}} className='flex justify-between items-center'><span>SECTIONS ALL</span></li>
                 <li  onClick={()=>{navigate('/contact'); sethambar(prev => !prev)}} className='flex justify-between items-center'><span>CONTACT US</span></li>
