@@ -55,6 +55,7 @@
                 {homeItem.map((key, index) => (
                     <div key={index} className={`relative px-3 md:px-5 lg:px-16 mt-3 
                         ${index === 1 ? 'md:h-[800px] md:w-full md:inline-block':''} 
+                        ${index === 3 ? 'md:h-[900px] md:w-full md:inline-block':''} 
                         ${index === 5 ? 'md:h-[300px] md:w-1/3 md:inline-block':''} 
                         ${index === 6 ? 'md:h-[300px] md:w-1/3 md:inline-block':''}
                         ${index === 7 ? 'md:h-[300px] md:w-1/3 md:inline-block':''}

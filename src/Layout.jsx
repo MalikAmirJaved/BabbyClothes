@@ -14,16 +14,16 @@ function Layout({ children }) {
       </div>
 
       {/* Sidebar toggle on mobile view */}
-      <div className='lg:hidden'>
+      <div className='lg:hidden fixed w-full overflow-hidden z-50'>
         {hambar && (
-          <div className='z-50 relative transition-all'>
+          <div className='z-50 top-0 relative transition-all overflow-auto'>
             <SideBar sethambar={sethambar} />
           </div>
         )}
       </div>
 
       {/* Main content, adjusted for the fixed NavBar */}
-      <div className='mt-20 lg:mt-28 Z-10'>
+      <div className='mt-20 lg:mt-32 z-10'>
         {/* Your main content */}
         <div className="">
           {children}
@@ -32,7 +32,7 @@ function Layout({ children }) {
 
 
       {/* footer */}
-      <div>
+      <div className='mt-11'>
         <Footer />
       </div>
     </div>

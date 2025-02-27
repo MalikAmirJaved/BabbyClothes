@@ -1,6 +1,8 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 function Footer() {
+    const Navigate = useNavigate();
     const footercontant = [
         {
             header: 'YOUR ACCOUNT',
@@ -33,15 +35,15 @@ function Footer() {
     ]
   return (
     <div>
-        <div className='flex justify-between px-32 pb-2 bg-white hidden'>
+        <div className=' justify-between px-2 lg:px-10 xl:px-16 2xl:px-24 pb-2 bg-white grid grid-cols-2 lg:flex'>
             {footercontant.map((key,index)=>(
-                <div key={index} className='text-center space-y-1'>
+                <div key={index} className='text-center space-y-1 mb-10'>
                     <h1 className='font-bold mb-4'>{key.header}</h1>
-                    <p className='text-[#3F3F3F]'>{key.p1}</p>
-                    <p className='text-[#3F3F3F]'>{key.p2}</p>
-                    <p className='text-[#3F3F3F]'>{key.p3}</p>
-                    <p className='text-[#3F3F3F]'>{key.p4}</p>
-                    <p className='text-[#3F3F3F]'>{key.p5}</p>
+                    <p onClick={index === 3 ?()=>{Navigate('/delivery')}:''} className='text-[#3F3F3F] cursor-pointer hover:underline'>{key.p1}</p>
+                    <p className='text-[#3F3F3F] cursor-pointer hover:underline'>{key.p2}</p>
+                    <p className='text-[#3F3F3F] cursor-pointer hover:underline'>{key.p3}</p>
+                    <p className='text-[#3F3F3F] cursor-pointer hover:underline'>{key.p4}</p>
+                    <p onClick={index === 3 ? ()=>{Navigate('/term-condition')}:null} className={`text-[#3F3F3F] cursor-pointer hover:underline`}>{key.p5}</p>
                 </div>
             ))}
         </div>
