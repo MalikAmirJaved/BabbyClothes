@@ -8,7 +8,7 @@
     import dp7 from '../Images/home/dp7.png';
     import dp6 from '../Images/home/dp6.png';
 
-    function Home() {
+    const Home = () => {
         const homeItem = [
             {
                 bgpic: dp1,
